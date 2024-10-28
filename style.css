@@ -1,0 +1,144 @@
+:root {
+  --fs-default: 0.875rem; /* 14px */
+  --fs-menu: 1.25rem; /* 20px */
+  --fs-h1: 1.875rem; /* 30px */
+  --fs-h2: 1.3125rem; /* 21px */
+  --fs-footer: 0.75rem; /* 12px */
+
+  --color-defaut: #2c4726;
+  --color-green: #b8cb21;
+}
+/******************************
+RESET
+*******************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/**************************
+DEFAULTS RULES  + body background
+***************************/
+
+body {
+  font-size: var(--fs-default);
+  font-family: Verdana, sans-serif;
+  line-height: 1.5;
+  color: var(--color-defaut);
+  background-image: url("./assets/img/fond.png");
+}
+
+h1,
+h2,
+header {
+  font-family: "oswald";
+  font-weight: 400;
+}
+
+/***************************
+LAYOUT
+***************************/
+
+.contained {
+  max-width: 750px;
+  margin-inline: auto;
+}
+
+.uncontained-footer {
+  width: 100vw;
+  text-align: center;
+}
+
+/**************************
+HEADER
+*************************/
+.flex-header {
+  --custom-space: 3rem;
+  display: flex;
+  background-color: var(--color-green);
+  justify-content: space-between;
+  align-items: center;
+  padding-right: var(--custom-space);
+}
+
+.flex-header nav menu {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  gap: var(--custom-space);
+  text-decoration: underline solid var(--color-defaut);
+  font-size: var(--fs-menu);
+}
+
+/**************************
+CONTENT
+**************************/
+
+.content {
+  padding: 1rem;
+  background-color: white;
+}
+/*
+titres
+*/
+h1 {
+  text-align: center;
+  font-size: var(--fs-h1);
+  margin-block: 1em;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  margin-block: 1em;
+  display: flex;
+}
+/* leaf */
+h2::before {
+  content: url("./assets/img/leaf.svg");
+  width: 1em;
+  height: 1em;
+
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+/*
+TEXTES 
+*/
+.content p,
+.content ul {
+  margin-bottom: 1em;
+}
+.content ul {
+  padding-left: 4rem;
+}
+
+/*
+SECTION LAYOUT
+*/
+.left-img-section img {
+  float: left;
+  margin-right: 1em;
+}
+
+.section-footer {
+  display: flex;
+  justify-content: end;
+}
+.readmore-btn {
+  border: none;
+  background-color: var(--color-green);
+  color: var(--color-defaut);
+  padding: 1em;
+  display: block;
+  color: inherit;
+}
+
+/*
+FOOTER
+*/
+
+footer {
+  padding: 1rem;
+  font-size: var(--fs-footer);
+}
